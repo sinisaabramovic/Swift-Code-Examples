@@ -48,6 +48,6 @@ class Car {
     }
     
     func drive() {
-        print("Car is moving")
+        print("\nCar is moving")
     }
 }

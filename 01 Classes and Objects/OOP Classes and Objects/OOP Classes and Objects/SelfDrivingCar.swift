@@ -8,6 +8,10 @@
 
 import Foundation
 
-class SelfDrivingCar {
+class SelfDrivingCar: Car {
     
+    override func drive() {
+        super.drive()
+        print("Im driving overide")
+    }
 }

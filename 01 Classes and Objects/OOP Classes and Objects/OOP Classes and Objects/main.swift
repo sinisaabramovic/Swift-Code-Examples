@@ -13,3 +13,7 @@ myCar.describe()
 
 let mySecondCar = Car("Gold")
 mySecondCar.describe()
+
+let mySelfDrivingCar = SelfDrivingCar("Blue")
+mySelfDrivingCar.drive()
+
