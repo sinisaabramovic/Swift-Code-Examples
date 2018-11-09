@@ -18,6 +18,10 @@ class Car {
     // variables and constants in classes is called properties
     var colour = "Black"
     var numberOfSeats: Int = 5
-    
     var typeOfCar: CarType = .Coupe
+    
+    // initializers
+    init(_ customerChosenColour: String) {
+        self.colour = customerChosenColour
+    }
 }
