@@ -21,9 +21,23 @@ class Car {
     var typeOfCar: CarType = .Coupe
     
     // initializers
-    init(_ customerChosenColour: String, _ customerChosenNumberOFSeats: Int8, _ customerChosenTypeOfCar: CarType) {
+    // this is a designated initializers
+    init() {
+    }
+    
+    // Optional initializer
+    convenience init(_ customerChosenColour: String){
+        self.init()
         self.colour = customerChosenColour
-        self.numberOfSeats = customerChosenNumberOFSeats
-        self.typeOfCar = customerChosenTypeOfCar
+    }
+    
+    convenience init(_ customerChosenColour: String, _ chosenNumberOfSeats: Int8){
+        self.init(customerChosenColour)
+        self.numberOfSeats = chosenNumberOfSeats
+    }
+    
+    convenience init(_ customerChosenColour: String, _ chosenNumberOfSeats: Int8, _ chosenType: CarType){
+        self.init(customerChosenColour, chosenNumberOfSeats)
+        self.typeOfCar = chosenType
     }
 }

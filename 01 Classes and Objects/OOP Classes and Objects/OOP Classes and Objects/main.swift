@@ -13,3 +13,5 @@ let myCar = Car("Red",3,.Hatchback)
 print(myCar.colour)
 print(myCar.numberOfSeats)
 print(myCar.typeOfCar)
+
+let mySecondCar = Car()
