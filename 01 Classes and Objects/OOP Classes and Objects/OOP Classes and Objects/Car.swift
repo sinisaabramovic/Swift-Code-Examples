@@ -17,11 +17,13 @@ enum CarType {
 class Car {
     // variables and constants in classes is called properties
     var colour = "Black"
-    var numberOfSeats: Int = 5
+    var numberOfSeats: Int8 = 5
     var typeOfCar: CarType = .Coupe
     
     // initializers
-    init(_ customerChosenColour: String) {
+    init(_ customerChosenColour: String, _ customerChosenNumberOFSeats: Int8, _ customerChosenTypeOfCar: CarType) {
         self.colour = customerChosenColour
+        self.numberOfSeats = customerChosenNumberOFSeats
+        self.typeOfCar = customerChosenTypeOfCar
     }
 }

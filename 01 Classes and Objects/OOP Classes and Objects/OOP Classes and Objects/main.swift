@@ -8,7 +8,7 @@
 
 import Foundation
 
-let myCar = Car("Red")
+let myCar = Car("Red",3,.Hatchback)
 
 print(myCar.colour)
 print(myCar.numberOfSeats)
