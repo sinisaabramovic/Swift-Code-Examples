@@ -9,5 +9,7 @@
 import Foundation
 
 class Car {
-    
+    // variables and constants in classes is called properties
+    var colour = "Black"
+    var numberOfSeats: Int = 5
 }
