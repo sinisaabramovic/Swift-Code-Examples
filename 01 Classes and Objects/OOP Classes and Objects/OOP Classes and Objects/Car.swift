@@ -26,18 +26,28 @@ class Car {
     }
     
     // Optional initializer
-    convenience init(_ customerChosenColour: String){
+    convenience init(_ customerChosenColour: String) {
         self.init()
         self.colour = customerChosenColour
     }
     
-    convenience init(_ customerChosenColour: String, _ chosenNumberOfSeats: Int8){
+    convenience init(_ customerChosenColour: String, _ chosenNumberOfSeats: Int8) {
         self.init(customerChosenColour)
         self.numberOfSeats = chosenNumberOfSeats
     }
     
-    convenience init(_ customerChosenColour: String, _ chosenNumberOfSeats: Int8, _ chosenType: CarType){
+    convenience init(_ customerChosenColour: String, _ chosenNumberOfSeats: Int8, _ chosenType: CarType) {
         self.init(customerChosenColour, chosenNumberOfSeats)
         self.typeOfCar = chosenType
+    }
+    
+    func describe() {
+        print("\n\(colour)")
+        print(numberOfSeats)
+        print("\(typeOfCar)")
+    }
+    
+    func drive() {
+        print("Car is moving")
     }
 }
