@@ -15,5 +15,6 @@ let mySecondCar = Car("Gold")
 mySecondCar.describe()
 
 let mySelfDrivingCar = SelfDrivingCar("Blue")
+//mySelfDrivingCar.destination = "Hello GO"
 mySelfDrivingCar.drive()
 

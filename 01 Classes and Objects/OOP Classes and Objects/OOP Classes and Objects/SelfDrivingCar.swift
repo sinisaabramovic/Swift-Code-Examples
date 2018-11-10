@@ -10,8 +10,16 @@ import Foundation
 
 class SelfDrivingCar: Car {
     
+    // var name data type and ? explain that this can contain null values
+    var destination: String?
+    
     override func drive() {
         super.drive()
-        print("Im driving overide")
+        
+        // Optional binding
+        if let userSetDestionation = destination {
+            print("Im driving overide " + userSetDestionation)
+        }
+       
     }
 }
