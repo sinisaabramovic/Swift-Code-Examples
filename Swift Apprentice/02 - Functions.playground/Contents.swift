@@ -97,3 +97,54 @@ func substract(_ a: Int, _ b: Int) -> Int {
 function = substract
 
 print(function(10, 2))
+
+// Primjer optionalsa
+
+var someOptional: Int? = 3
+
+// Ako zelimo koristiti optiona vrijednost tada MORAMO napraviti otpakiravanje optionala,
+// otpakirava se na nacin da se stavi ime varijable i na kraju znak !
+// primjer
+print(someOptional! + 1)
+
+func calculateNumberOfSides(shape: String) -> Int? {
+    switch shape {
+    case "Triangle":
+        return 3
+    case "Square":
+        return 4
+    case "Rect":
+        return 4
+    case "Pentagon":
+        return 5
+    case "Hexagon":
+        return 6
+    default:
+        return nil
+    }
+}
+
+func maybePrintSides(shape: String) {
+    let sides = calculateNumberOfSides(shape: shape)
+    
+    if let sides = sides {
+        print("A \(shape) has \(sides) sides")
+    } else {
+        print("I dont know the number of sides for \(shape)")
+    }
+}
+
+maybePrintSides(shape: "Square")
+
+// Isti primjer koristenje guard
+
+func maybePrintSides_Guarded(shape: String) {
+    guard let sides = calculateNumberOfSides(shape: shape) else {
+        print("I dont know the number of sides for \(shape)")
+        return
+    }
+    
+    print("A \(shape) has \(sides) sides")
+}
+
+maybePrintSides_Guarded(shape: "Rect")
